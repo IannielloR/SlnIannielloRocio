@@ -2,7 +2,7 @@
 
 namespace SlnIannielloRocio.Validations
 {
-    public class ValidCategory : ValidationAttribute
+    public class ValidEdad : ValidationAttribute
     {
         protected override ValidationResult IsValid(object value, ValidationContext validationContext)
         {
@@ -11,9 +11,11 @@ namespace SlnIannielloRocio.Validations
                 return ValidationResult.Success;
             }
 
-            if (value.ToString() != "Desayuno")
+            int edad = (int)value;
+
+            if (edad < 18)
             {
-                return new ValidationResult("Solo se permite ingresar la categoría desayuno!");
+                return new ValidationResult("Solo se aceptan edades mayores o iguales a 18!");
             }
 
             return ValidationResult.Success;

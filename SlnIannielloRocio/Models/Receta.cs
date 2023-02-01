@@ -36,7 +36,7 @@ namespace SlnIannielloRocio.Models
 
         [Required(ErrorMessage = "Campo obligatorio")]
         [Column(TypeName = "varchar(50)")]
-        [RegularExpression("^[^@]+@[^@]+\\.[a-zA-Z]{2,}$")]
+        [RegularExpression(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$", ErrorMessage = "Se debe ingresar un email")]
         public string Email { get; set; }
 
         [Required(ErrorMessage = "Campo obligatorio")]
