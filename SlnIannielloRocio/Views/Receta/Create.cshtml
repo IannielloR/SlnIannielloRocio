@@ -2,7 +2,7 @@
 <h3>Nueva Receta</h3>
 <hr />
 
-@using (Html.BeginForm("Create", "", FormMethod.Post))
+@using (Html.BeginForm("Create", "Receta", FormMethod.Post))
 {
     <div id="formulario">
         <div class="form-group">
@@ -58,5 +58,5 @@
 
 }
 @section SideBar{ 
-    @Html.ActionLink("Volver al index", "Index", "Receta")
+    @Html.ActionLink("Volver al index", "Index", "Empleado")
 }
