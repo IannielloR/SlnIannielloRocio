@@ -16,11 +16,19 @@
 
 #sidebar {
     float: right;
-    width: max-content;
-    height: max-content;
+
     padding: 5px;
     border: dotted 3px darkblue;
     background-color: lightblue;
+}
+#binvenida {
+    justify-content: center;
+    width: 25px;
+}
+#imgComida {
+  
+    width: 50px;
+    height: 50px;
 }
 
 #content {
@@ -33,4 +41,19 @@
     background-color:skyblue;
     color: black;
     clear: both;
+}
+
+#formulario {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 1rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
 }

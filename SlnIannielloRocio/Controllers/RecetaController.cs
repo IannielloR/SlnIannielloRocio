@@ -55,11 +55,23 @@ namespace SlnIannielloRocio.Controllers
             }
         }
         [HttpGet]
-        public IActionResult DetailsByAutor(string nombre, string apellido)
+        public IActionResult DetailsByAutor(string autor)
         {
             var recetas  = (from r in context.Recetas
-                             where r.AutorNombre == nombre && r.AutorApellido == apellido
+                             where r.Autor == autor
                              select r).ToList();
+
+            if (recetas == null)
+                return NotFound();
+
+            return View("DetailsByAutor", recetas);
+        }
+
+        public IActionResult DetailsByApellido(string apellido)
+        {
+            var recetas = (from r in context.Recetas
+                           where r.Apellido == apellido
+                           select r).ToList();
 
             if (recetas == null)
                 return NotFound();

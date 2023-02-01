@@ -26,11 +26,11 @@ namespace SlnIannielloRocio.Models
 
         [Required(ErrorMessage = "Campo obligatorio")]
         [Column(TypeName = "varchar(50)")]
-        public string AutorNombre { get; set; }
+        public string Autor { get; set; }
 
         [Required(ErrorMessage = "Campo obligatorio")]
         [Column(TypeName = "varchar(50)")]
-        public string AutorApellido { get; set;}
+        public string Apellido { get; set;}
 
         public int Edad { get; set; }
 

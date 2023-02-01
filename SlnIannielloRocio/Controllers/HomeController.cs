@@ -7,12 +7,6 @@ namespace SlnIannielloRocio.Controllers
     {
         public IActionResult Index()
         {
-            ViewBag.Nombre = "Bienvenido al sistema de Operas";
-            ViewBag.Fecha = DateTime.Now.ToString();
-            return View();
-        }
-        public ActionResult About()
-        {
             return View();
         }
     }

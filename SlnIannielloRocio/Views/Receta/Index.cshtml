@@ -8,8 +8,8 @@
         <th>@Html.DisplayNameFor(model=>model.Titulo)</th>
         <th>@Html.DisplayNameFor(model=>model.Ingredientes)</th>
         <th>@Html.DisplayNameFor(model=>model.Instrucciones)</th>
-        <th>@Html.DisplayNameFor(model=>model.AutorNombre)</th>
-        <th>@Html.DisplayNameFor(model=>model.AutorApellido)</th>
+        <th>@Html.DisplayNameFor(model=>model.Autor)</th>
+        <th>@Html.DisplayNameFor(model=>model.Apellido)</th>
         <th>@Html.DisplayNameFor(model=>model.Edad)</th>
         <th>@Html.DisplayNameFor(model=>model.Email)</th>
 
@@ -19,7 +19,7 @@
     {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem=>item.Titulo)
+                @Html.ActionLink(item.Titulo,"Details","Receta",new{id=item.Id })
             </td>
             <td>
                 @Html.DisplayFor(modelItem=>item.Ingredientes)
@@ -28,10 +28,10 @@
                 @Html.DisplayFor(modelItem=>item.Instrucciones)
             </td>
             <td>
-                @Html.DisplayFor(modelItem=>item.AutorNombre)
+                @Html.ActionLink(item.Autor, "DetailsByAutor", "Receta", new{autor = item.Autor})
             </td>
             <td>
-                @Html.DisplayFor(modelItem=>item.AutorApellido)
+                @Html.ActionLink(item.Autor, "DetailsByApellido", "Receta", new{apellido = item.Apellido})
             </td>
             <td>
                 @Html.DisplayFor(modelItem=>item.Edad)
@@ -39,9 +39,7 @@
             <td>
                 @Html.DisplayFor(modelItem=>item.Email)
             </td>
-            <td>
-                @Html.ActionLink("Detalle","Details","Receta",new{id=item.Id })
-            </td>
+           
         </tr>
     }
     @Html.ActionLink("Buscar Nombre Apellido","DetailsByAutor","Receta")
