@@ -3,6 +3,11 @@
     ViewData["Title"] = "Crear";
 }
 <p>
+    @Html.LabelFor(model=>model.Titulo)
+    @Html.TextBoxFor(model=>model.Titulo)
+    @Html.ValidationMessageFor(model=>model.Titulo)
+</p>
+<p>
     @Html.LabelFor(model=>model.Ingredientes)
     @Html.TextBoxFor(model=>model.Ingredientes)
     @Html.ValidationMessageFor(model=>model.Ingredientes)

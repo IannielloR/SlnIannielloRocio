@@ -5,6 +5,7 @@
 @Html.ActionLink("Nuevo","Create","Receta")
 <table>
     <tr>
+        <th>@Html.DisplayNameFor(model=>model.Titulo)</th>
         <th>@Html.DisplayNameFor(model=>model.Ingredientes)</th>
         <th>@Html.DisplayNameFor(model=>model.Instrucciones)</th>
         <th>@Html.DisplayNameFor(model=>model.AutorNombre)</th>
@@ -17,6 +18,9 @@
     @foreach (var item in Model)
     {
         <tr>
+            <td>
+                @Html.DisplayFor(modelItem=>item.Titulo)
+            </td>
             <td>
                 @Html.DisplayFor(modelItem=>item.Ingredientes)
             </td>
@@ -39,6 +43,6 @@
                 @Html.ActionLink("Detalle","Details","Receta",new{id=item.Id })
             </td>
         </tr>
-
     }
+    @Html.ActionLink("Buscar Nombre Apellido","DetailsByAutor","Receta")
 </table>

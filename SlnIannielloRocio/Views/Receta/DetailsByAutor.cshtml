@@ -3,6 +3,7 @@
     <thead>
         <tr>
             <th>@Html.DisplayNameFor(model => model.Id)</th>
+            <th>@Html.DisplayNameFor(model => model.Titulo)</th>
             <th>@Html.DisplayNameFor(model => model.Ingredientes)</th>
             <th>@Html.DisplayNameFor(model => model.Instrucciones)</th>
             <th>@Html.DisplayNameFor(model => model.AutorNombre)</th>
@@ -20,7 +21,9 @@
                 <td>
                     @Html.DisplayFor(modelItem => item.Id)
                 </td>
-
+                <td>
+                    @Html.DisplayFor(modelItem => item.Titulo)
+                </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.Ingredientes)
                 </td>
