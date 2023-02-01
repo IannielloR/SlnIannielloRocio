@@ -55,7 +55,7 @@ namespace SlnIannielloRocio.Controllers
             }
         }
         [HttpGet]
-        public IActionResult DetailsByTitle(string nombre, string apellido)
+        public IActionResult DetailsByAutor(string nombre, string apellido)
         {
             var recetas  = (from r in context.Recetas
                              where r.AutorNombre == nombre && r.AutorApellido == apellido
@@ -64,7 +64,7 @@ namespace SlnIannielloRocio.Controllers
             if (recetas == null)
                 return NotFound();
 
-            return View("DetailsByTitle", recetas);
+            return View("DetailsByAutor", recetas);
         }
 
         private Receta TraerUna(int id)

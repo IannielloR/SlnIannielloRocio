@@ -1,0 +1,55 @@
+﻿@model IEnumerable<SlnIannielloRocio.Models.Receta>
+<table class="table container">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.Id)</th>
+            <th>@Html.DisplayNameFor(model => model.Ingredientes)</th>
+            <th>@Html.DisplayNameFor(model => model.Instrucciones)</th>
+            <th>@Html.DisplayNameFor(model => model.AutorNombre)</th>
+            <th>@Html.DisplayNameFor(model => model.AutorApellido)</th>
+            <th>@Html.DisplayNameFor(model => model.Edad)</th>
+            <th>@Html.DisplayNameFor(model => model.Email)</th>
+            <th>Operaciones</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.Ingredientes)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.Instrucciones)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.AutorNombre)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.AutorApellido)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.Edad)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+
+                <td>
+                    @Html.ActionLink("Ver", "Details", "Empleado", new {id = item.Id}, new {@class="btn-ver"})
+                </td>
+            </tr>
+        }
+    </tbody>
+    @Html.ActionLink("Volver a Index", "Index", "Empleado")
+</table>
+

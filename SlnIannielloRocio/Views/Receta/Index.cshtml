@@ -1,0 +1,44 @@
+﻿@model IEnumerable<SlnIannielloRocio.Models.Receta>
+@{
+    ViewData["Title"] = "Index Receta";
+}
+@Html.ActionLink("Nuevo","Create","Receta")
+<table>
+    <tr>
+        <th>@Html.DisplayNameFor(model=>model.Ingredientes)</th>
+        <th>@Html.DisplayNameFor(model=>model.Instrucciones)</th>
+        <th>@Html.DisplayNameFor(model=>model.AutorNombre)</th>
+        <th>@Html.DisplayNameFor(model=>model.AutorApellido)</th>
+        <th>@Html.DisplayNameFor(model=>model.Edad)</th>
+        <th>@Html.DisplayNameFor(model=>model.Email)</th>
+
+        <th></th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem=>item.Ingredientes)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem=>item.Instrucciones)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem=>item.AutorNombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem=>item.AutorApellido)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem=>item.Edad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem=>item.Email)
+            </td>
+            <td>
+                @Html.ActionLink("Detalle","Details","Receta",new{id=item.Id })
+            </td>
+        </tr>
+
+    }
+</table>
