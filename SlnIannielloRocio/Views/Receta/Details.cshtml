@@ -61,6 +61,9 @@
             @Html.DisplayFor(model => model.Email)
         </dd>
     </dl>
-    @Html.ActionLink("Volver a Index", "Index", "Receta")
+
 </div>
+@section SideBar{ 
+    @Html.ActionLink("Volver al index", "Index", "Receta")
+}
 

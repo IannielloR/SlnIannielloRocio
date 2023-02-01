@@ -39,8 +39,14 @@
             <td>
                 @Html.DisplayFor(modelItem=>item.Email)
             </td>
-           
+            <td>
+                @Html.ActionLink("Borrar", "Delete", "Receta", new {id = item.Id}, new{@class="btn btn-danger"})
+                @Html.ActionLink("Editar", "Edit", "Receta", new {id = item.Id}, new{@class="btn btn-warning"})
+            </td>           
         </tr>
     }
-    @Html.ActionLink("Buscar Nombre Apellido","DetailsByAutor","Receta")
 </table>
+
+@section SideBar{ 
+    @Html.ActionLink("Volver al index", "Index", "Receta")
+}

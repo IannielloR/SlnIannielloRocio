@@ -1,8 +1,8 @@
 ﻿@model SlnIannielloRocio.Models.Receta
-<h3>Nueva Receta</h3>
-<hr />
 
-@using (Html.BeginForm("Create", "", FormMethod.Post))
+<h1>Editar Empleado</h1>
+<hr />
+@using (Html.BeginForm("Edit", "Receta", FormMethod.Post))
 {
     <div id="formulario">
         <div class="form-group">
@@ -12,15 +12,11 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.Categoria)
-            @Html.TextBoxFor(model => model.Categoria)
-            @Html.ValidationMessageFor(model => model.Categoria)
-        </div>
-        <div class="form-group">
             @Html.LabelFor(model => model.Ingredientes)
             @Html.TextBoxFor(model => model.Ingredientes)
             @Html.ValidationMessageFor(model => model.Ingredientes)
         </div>
+
         <div class="form-group">
             @Html.LabelFor(model => model.Instrucciones)
             @Html.TextBoxFor(model => model.Instrucciones)
@@ -44,19 +40,18 @@
             @Html.TextBoxFor(model => model.Edad)
             @Html.ValidationMessageFor(model => model.Edad)
         </div>
-
         <div class="form-group">
             @Html.LabelFor(model => model.Email)
             @Html.TextBoxFor(model => model.Email)
             @Html.ValidationMessageFor(model => model.Email)
         </div>
 
-        <input type="submit" class="btn btn-success" value="Crear" action="" />
+        <input type="submit" class="btn btn-success" value="Editar" action="Edit" />
 
-        
+    
     </div>
-
 }
 @section SideBar{ 
     @Html.ActionLink("Volver al index", "Index", "Receta")
 }
+
