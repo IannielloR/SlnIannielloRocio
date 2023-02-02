@@ -2,8 +2,11 @@
 @{
     ViewData["Title"] = "Index Receta";
 }
+<div class="container">
 @Html.ActionLink("Nuevo","Create","Receta")
-<table>
+</div>
+
+<table class ="table container">
     <tr>
         <th>@Html.DisplayNameFor(model=>model.Titulo)</th>
         <th>@Html.DisplayNameFor(model=>model.Ingredientes)</th>
@@ -31,7 +34,7 @@
                 @Html.ActionLink(item.Autor, "DetailsByAutor", "Receta", new{autor = item.Autor})
             </td>
             <td>
-                @Html.ActionLink(item.Autor, "DetailsByApellido", "Receta", new{apellido = item.Apellido})
+                @Html.ActionLink(item.Apellido, "DetailsByApellido", "Receta", new{apellido = item.Apellido})
             </td>
             <td>
                 @Html.DisplayFor(modelItem=>item.Edad)

@@ -12,8 +12,9 @@
         <h1>Recetas</h1>
     </div>
     <div id="menu">
-        @Html.ActionLink("Inicio","Index","Home")
-        @Html.ActionLink("Recetas","Index","Receta")
+        <a>@Html.ActionLink("Inicio","Index","Home")</a>
+        <a>@Html.ActionLink("Recetas","Index","Receta")</a>
+        
     </div>
     <div id="sidebar">
         @if (IsSectionDefined("SideBar"))

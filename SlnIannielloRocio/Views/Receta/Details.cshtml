@@ -1,7 +1,7 @@
 ﻿@model SlnIannielloRocio.Models.Receta
 <div class="container">
 
-    <h3>Detalle Empleado</h3>
+    <h3>Detalle Receta</h3>
     <hr />
 
     <dl class="row">
@@ -64,6 +64,8 @@
 
 </div>
 @section SideBar{ 
-    @Html.ActionLink("Volver al index", "Index", "Receta")
+    @Html.ActionLink("Volver a Index", "Index", "Receta", null, new {@class = "btn btn-light"})
+    @Html.ActionLink("Borrar", "Delete", "Receta", new {id = Model.Id}, new{@class="btn btn-light"})
+    @Html.ActionLink("Editar", "Edit", "Receta", new {id = Model.Id}, new{@class="btn btn-light"})
 }
 
